@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DriveCore</title>
+    <link rel="stylesheet" href="styles/common.css" />
+    <style>
+        #slider-track {
+            /* width: 600px; */
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            margin: 20px auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        #slider-track img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #slider-track img.active {
+            opacity: 1;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <h1><span style="color: black; font-weight: bold">Drive</span><span
+                    style="color: #ff6600; font-weight: bold">Core</span></h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about.html">Company</a></li>
+                <li><a href="learn.html">Learn & Support</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="hero">
+            <h2>자율주행의 미래, 드라이브코어와 함께</h2>
+            <p>기술의 복잡함은 저희가 담당합니다. 고객은 비전만 가지고 오세요.</p>
+        </section>
+
+        <section class="slider">
+            <div id="slider-track">
+                <img src="images/branding1.jpg" alt="브랜딩 이미지 1" class="active" />
+                <img src="images/branding2.jpg" alt="브랜딩 이미지 2" />
+                <img src="images/branding3.jpg" alt="브랜딩 이미지 3" />
+            </div>
+        </section>
+
+        <section class="modules">
+            <h3>핵심 모듈 소개</h3>
+            <ul>
+                <li><strong>VOC</strong>: Vision Optimized Core</li>
+                <li><strong>MOC</strong>: Map Optimized Core</li>
+                <li><strong>LOC</strong>: Localization Optimized Core</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Drive Core</p>
+    </footer>
+</body>
+
+<script>
+    const images = document.querySelectorAll('#slider-track img');
+    let current = 0;
+
+    function slideShow() {
+        images[current].classList.remove('active');
+        current = (current + 1) % images.length;  // 0->1->2->0->1->2 반복
+        images[current].classList.add('active');
+        console.log("call")
+    }
+
+    setInterval(slideShow, 5000); // 5초마다 이미지 변경
+</script>
+
+</html>

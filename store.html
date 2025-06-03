@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DriveCore - Store</title>
+    <link rel="stylesheet" href="styles/common.css" />
+    <style>
+
+
+        .store-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 0 2rem 2rem;
+        } -->
+
+        aside {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+        }
+
+        .store-grid {
+            flex: 4;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            border: 1px solid #aaa;
+            padding: 1rem;
+            text-align: center;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .card-img {
+        height: 150px;
+        background-color: #f2f2f2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        position: relative;
+        background-size: cover;
+    }
+    .img-cover {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 2;
+    }
+    .card_content {
+        color: #ffffff;
+        font-size: large;
+
+        z-index: 1;
+    }
+
+        .read-more {
+            border: 1px solid #f47350;
+            background: none;
+            padding: 0.3rem 1rem;
+            color: #f47350;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        #slider-track {
+            /* width: 600px; */
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            margin: 20px auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        #slider-track img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #slider-track img.active {
+            opacity: 1;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <h1><span style="color: black; font-weight: bold">Drive</span><span
+                    style="color: #ff6600; font-weight: bold">Core</span></h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about.html">Company</a></li>
+                <li><a href="learn.html">Learn & Support</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="store-page">
+        <section class="store-banner">
+            <div id="slider-track">
+                <img src="images/branding1.jpg" alt="브랜딩 이미지 1" class="active" />
+                <img src="images/branding2.jpg" alt="브랜딩 이미지 2" />
+                <img src="images/branding3.jpg" alt="브랜딩 이미지 3" />
+            </div>
+        </section>
+        <div class="store-content">
+            <aside>
+                <input type="text" placeholder="Enter your keywords" class="search-box" />
+                <button class="search-btn">Search</button>
+                <div class="filter-group">
+                    <h4>Functionality <span title="기능 필터">❓</span></h4>
+                    <label><input type="checkbox"> VOC</label><br />
+                    <label><input type="checkbox"> LOC</label><br />
+                    <label><input type="checkbox"> MOC</label>
+                </div>
+                <div class="filter-group">
+                    <h4>Interface <span title="인터페이스 필터">❓</span></h4>
+                    <label><input type="checkbox"> RS232</label>
+                </div>
+            </aside>
+            <section class="store-grid">
+                <div class="card">
+                    <div class="card-img" style="background-image: url(images/products/mobileye.jpg);">
+                        <div class="img-cover"></div>
+                    </div>
+                    <p>제품 설명 - VOC</p>
+                    <button class="read-more">Read more</button>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url(images/products/novatel.jpg);">
+                        <div class="img-cover"></div>
+                    </div>
+                    <p>제품 설명 - VOC</p>
+                    <button class="read-more">Read more</button>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url(images/products/mti_670.webp);">
+                        <div class="img-cover"></div>
+                    </div>
+                    <p>제품 설명 - VOC</p>
+                    <button class="read-more">Read more</button>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url(images/products/mobileye.jpg);">
+                        <div class="img-cover"></div>
+                    </div>
+                    <p>제품 설명 - VOC</p>
+                    <button class="read-more">Read more</button>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url(images/products/novatel.jpg);">
+                        <div class="img-cover"></div>
+                    </div>
+                    <p>제품 설명 - VOC</p>
+                    <button class="read-more">Read more</button>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url(images/products/mti_670.webp);">
+                        <div class="img-cover"></div>
+                    </div>
+                    <p>제품 설명 - VOC</p>
+                    <button class="read-more">Read more</button>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url(images/products/mobileye.jpg);">
+                        <div class="img-cover"></div>
+                    </div>
+                    <p>제품 설명 - VOC</p>
+                    <button class="read-more">Read more</button>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url(images/products/novatel.jpg);">
+                        <div class="img-cover"></div>
+                    </div>
+                    <p>제품 설명 - VOC</p>
+                    <button class="read-more">Read more</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Drive Core</p>
+    </footer>
+</body>
+
+<script>
+    const images = document.querySelectorAll('#slider-track img');
+    let current = 0;
+
+    function slideShow() {
+        images[current].classList.remove('active');
+        current = (current + 1) % images.length;  // 0->1->2->0->1->2 반복
+        images[current].classList.add('active');
+        console.log("call")
+    }
+
+    setInterval(slideShow, 5000); // 5초마다 이미지 변경
+</script>
+
+</html>

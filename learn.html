@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DriveCore</title>
+    <link rel="stylesheet" href="styles/common.css" />
+    <style>
+    .learn-support {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem;
+    }
+
+    aside {
+        flex: 1;
+        min-width: 200px;
+        max-width: 250px;
+    }
+
+    .search-box {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .search-btn {
+        width: 100%;
+        padding: 0.5rem;
+        background-color: #f47350;
+        color: white;
+        border: none;
+        margin-bottom: 1rem;
+    }
+
+    .filter-group {
+        margin-top: 1rem;
+    }
+
+    .support-cards {
+        flex: 3;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .support-cards .card {
+        border: 1px solid #aaa;
+        padding: 1rem;
+        text-align: center;
+        background: white;
+        border-radius: 8px;
+        max-height: 300px;
+    }
+
+
+    .card-img {
+        height: 150px;
+        background-color: #f2f2f2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        position: relative;
+        background-size: cover;
+    }
+    .img-cover {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 2;
+    }
+    .card_content {
+        color: #ffffff;
+        font-size: large;
+
+        z-index: 1;
+    }
+    .read-more {
+        border: 1px solid #f47350;
+        background: none;
+        padding: 0.3rem 1rem;
+        color: #f47350;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <h1><span style="color: black; font-weight: bold">Drive</span><span
+                    style="color: #ff6600; font-weight: bold">Core</span></h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about.html">Company</a></li>
+                <li><a href="learn.html">Learn & Support</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+    </header>
+    <main class="learn-support">
+        <aside>
+            <input type="text" placeholder="Enter your keywords" class="search-box" />
+            <button class="search-btn">Search</button>
+            <div class="filter-group">
+                <h4>Functionality <span title="기능 필터">❓</span></h4>
+                <label><input type="checkbox"> VOC</label><br>
+                <label><input type="checkbox"> LOC</label><br>
+                <label><input type="checkbox"> MOC</label>
+            </div>
+            <div class="filter-group">
+                <h4>Interface <span title="인터페이스 필터">❓</span></h4>
+                <label><input type="checkbox"> RS232</label>
+            </div>
+        </aside>
+        <section class="support-cards">
+            <div class="card">
+                <div class="card-img" style="background-image: url(images/products/mobileye.jpg);">
+                    <span class="card_content">VOC-310</span>
+                    <div class="img-cover"></div>
+                </div>
+                <a href="#">제품 브로셔</a> <br>
+                <a href="#">제품 매뉴얼</a> <br>
+                <a href="#">제품 데이터 시트</a> <br>
+                <button class="read-more">Read more</button>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url(images/products/mobileye.jpg);">
+                    <span class="card_content">VOC-320</span>
+                    <div class="img-cover"></div>
+                </div>
+                <a href="#">제품 브로셔</a> <br>
+                <a href="#">제품 매뉴얼</a> <br>
+                <a href="#">제품 데이터 시트</a> <br>
+                <button class="read-more">Read more</button>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url(images/products/mobileye.jpg);">
+                    <span class="card_content">VOC-330</span>
+                    <div class="img-cover"></div>
+                </div>
+                <a href="#">제품 브로셔</a> <br>
+                <a href="#">제품 매뉴얼</a> <br>
+                <a href="#">제품 데이터 시트</a> <br>
+                <button class="read-more">Read more</button>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url(images/products/mobileye.jpg);">
+                    <span class="card_content">VOC-340</span>
+                    <div class="img-cover"></div>
+                </div>
+                <a href="#">제품 브로셔</a> <br>
+                <a href="#">제품 매뉴얼</a> <br>
+                <a href="#">제품> 데이터</a> <br>
+                <button class="read-more">Read more</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Drive Core</p>
+    </footer>
+</body>
+
+</html>

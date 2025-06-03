@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DriveCore</title>
+    <link rel="stylesheet" href="styles/common.css" />
+    <style>
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            max-height: 300px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <h1><span style="color: black; font-weight: bold">Drive</span><span
+                    style="color: #ff6600; font-weight: bold">Core</span></h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about.html">Company</a></li>
+                <li><a href="learn.html">Learn & Support</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>모듈 상품</h2>
+        <div class="product-grid">
+            <div class="card">
+                <img src="images/products/mobileye.jpg" alt="">
+                <h3>VOC 모듈</h3>
+                <p>Vision 최적화 모듈</p>
+            </div>
+            <div class="card">
+                <img src="images/products/novatel.jpg" alt="">
+                <h3>MOC 모듈</h3>
+                <p>Map 최적화 모듈</p>
+            </div>
+            <div class="card">
+                <img src="images/products/mti_670.webp" alt="">
+                <h3>LOC 모듈</h3>
+                <p>Localization 최적화 모듈</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Drive Core</p>
+    </footer>
+</body>
+
+</html>

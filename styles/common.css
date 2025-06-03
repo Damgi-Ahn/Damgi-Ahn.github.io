@@ -1,0 +1,101 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+header {
+  background-color: white;
+  border: 2px solid #002030;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header a {
+  text-decoration: none;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+header h1 span {
+  color: #ff6600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav ul li {
+  font-size: 1rem;
+}
+
+nav ul li:last-child::after {
+  content: "\1F4AC"; /* 말풍선 유니코드 아이콘 */
+  margin-left: 0.3rem;
+  color: #ff6600;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+main {
+  padding: 2rem;
+  min-height: calc(100vh - 10rem);
+}
+
+footer {
+  background-color: #1e1e2f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero {
+  background: #e8f0fe;
+  border-radius: 12px;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.slider {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .hero {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  nav ul {
+    font-size: 0.9rem;
+  }
+  .modules ul, footer {
+    font-size: 0.9rem;
+  }
+}
